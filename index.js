@@ -3,6 +3,7 @@ const fs = require("fs");
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
+const renderTeam = require("./src/html-templates")
 
 const teamMemeberObjArr = [];
 
@@ -134,6 +135,9 @@ const createIntern = () => {
 }
 
 const buildTeam = () => {
+  fs.writeFile("./dist/index.html", renderTeam(teamMemeberObjArr), (err) =>
+  err ? console.log(err) : console.log('Success!')
+);
 
 }
 
