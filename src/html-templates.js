@@ -3,13 +3,14 @@ const makeTeam = (team) => {
   const generateManagerCard = manager => {
     return  `
     <div class="card" style="width: 18rem; margin: 16px">
-      <div class="card-body">
+      <div class="card-body"  style="background-color: #8399C9;">
         <h5 class="card-title">${manager.name}</h5>
+        <h6 class="card-title">Manager</h6>
       </div>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item">${manager.id}</li>
-        <a href="mailto:${manager.email}"><li class="list-group-item">${manager.email}</li></a>
-        <li class="list-group-item">${manager.officeNumber}</li>
+        <li class="list-group-item">ID: ${manager.id}</li>
+        <a href="mailto:${manager.email}"><li class="list-group-item">Email: ${manager.email}</li></a>
+        <li class="list-group-item">Office number: ${manager.officeNumber}</li>
       </ul>
     </div>
   `
@@ -17,27 +18,29 @@ const makeTeam = (team) => {
   const generateEngineerCard = engineer => {
     return  `
     <div class="card" style="width: 18rem; margin: 16px">
-      <div class="card-body">
+      <div class="card-body"  style="background-color: #8399C9;">
         <h5 class="card-title">${engineer.name}</h5>
+        <h6 class="card-title">Engineer</h6>
       </div>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item">${engineer.id}</li>
-        <a href="mailto:${engineer.email}"><li class="list-group-item">${engineer.email}</li></a>
-        <li class="list-group-item">${engineer.getGithub()}</li>
+        <li class="list-group-item">ID: ${engineer.id}</li>
+        <a href="mailto:${engineer.email}"><li class="list-group-item">Email: ${engineer.email}</li></a>
+        <a href="https://github.com/${engineer.getGithub()}" target="_blank"><li class="list-group-item">Github: ${engineer.getGithub()}</li></a>
       </ul>
     </div>
   `
   };
   const generateInternCard = intern => {
     return  `
-    <div class="card" style="width: 18rem;">
-      <div class="card-body">
+    <div class="card" style="width: 18rem;  margin: 16px">
+      <div class="card-body"  style="background-color: #8399C9;">
         <h5 class="card-title">${intern.name}</h5>
+        <h6 class="card-title">Intern</h6>
       </div>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item">${intern.id}</li>
-        <a href="mailto:${intern.email}"><li class="list-group-item">${intern.email}</li></a>
-        <li class="list-group-item">${intern.getSchool()}</li>
+        <li class="list-group-item">ID: ${intern.id}</li>
+        <a href="mailto:${intern.email}"><li class="list-group-item">Email: ${intern.email}</li></a>
+        <li class="list-group-item">School: ${intern.getSchool()}</li>
       </ul>
     </div>
   `
@@ -80,7 +83,7 @@ module.exports = team => {
   <body>
   
     <h1 style="height: 100px; padding-top: 16px; text-align: center; background-color: #8399C9;">TEAM PROFILE GENERATOR</h1>
-    <section display: flex; flex-direction: row; padding: 16px; justify-content: center;>
+    <section style="display: flex; flex-direction: row; flex-wrap: wrap; padding: 16px; justify-content: center;">
       ${makeTeam(team)}
     </section>
   
