@@ -1,6 +1,6 @@
 # Team Profile Generator
 
-Walkthrough video: https://github.com/ozerkerr/team-profile-generator/commits/main
+Walkthrough video: https://www.loom.com/share/be828e7a8b054b4e9ab70cd66185b1c3
 
 This command-line application that accepts user input then generates a webpage that displays the User's team basic info with quick access to their emails and GitHub profiles. When the User clicks on an email address in the HTML, then email app opens with nail directed to the corresponding address. When the User clicks on a github link, then browser redirecects to github profile page of an engineer. 
 
